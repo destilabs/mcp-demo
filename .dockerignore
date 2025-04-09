@@ -1,0 +1,6 @@
+.gitignore
+.venv
+calculator-server.py
+__pycache__
+client.py
+server-config.json
