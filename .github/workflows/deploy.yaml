@@ -30,8 +30,7 @@ jobs:
     - name: Build and push Docker image
       run: |
         gcloud auth configure-docker us-central1-docker.pkg.dev
-        docker build -t us-central1-docker.pkg.dev/destilabs/gcf-artifacts/mcp-demo:${{ github.sha }}
-          .
+        docker build -t us-central1-docker.pkg.dev/destilabs/gcf-artifacts/mcp-demo:${{ github.sha }} .
         docker push us-central1-docker.pkg.dev/destilabs/gcf-artifacts/mcp-demo:${{ github.sha }}
 
     - name: Deploy to Cloud Run
